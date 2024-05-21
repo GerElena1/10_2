@@ -21,6 +21,10 @@
                         color="primary" icon="delete" /></q-item-section>
             </q-item>
         </q-list>
+        <div class="no-task absolute-center" v-if="!tasks.length">
+            <q-icon name="check" size="150px" color="primary"></q-icon>
+            <div class="text-h4 text-primary text-center">No Task!</div>
+        </div>
     </q-page>
 </template>
 
@@ -29,7 +33,9 @@ export default {
     data() {
         return {
             newTask: "",
-            tasks: [{ title: '', done: false }, { title: 'helo1', done: false }, { title: 'helo2', done: false }]
+            tasks: [
+                // { title: '', done: false }, { title: 'helo1', done: false }, { title: 'helo2', done: false }
+            ]
         }
     },
     methods: {
